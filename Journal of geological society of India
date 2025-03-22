@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0">
+  <info>
+    <title>Journal of Geological Society of India</title>
+    <id>http://www.zotero.org/styles/jgsi</id>
+    <link rel="self" href="http://www.zotero.org/styles/jgsi"/>
+    <link rel="documentation" href="https://www.geosocindia.org/"/>
+    <author>
+      <name>Custom CSL for JGSI</name>
+    </author>
+    <category citation-format="author-date"/>
+    <category field="geology"/>
+    <summary>CSL style for the Journal of Geological Society of India</summary>
+  </info>
+  <macro name="author">
+    <names variable="author">
+      <name and="text" delimiter=", " initialize-with="."/>
+    </names>
+  </macro>
+  <macro name="date">
+    <date variable="issued">
+      <date-part name="year" prefix="(" suffix=")"/>
+    </date>
+  </macro>
+  <macro name="title">
+    <text variable="title" suffix=","/>
+  </macro>
+  <macro name="journal-title">
+    <text variable="container-title" font-style="italic"/>
+  </macro>
+  <macro name="volume">
+    <text term="volume" text-case="lowercase" suffix="."/>
+    <text variable="volume" prefix="v."/>
+  </macro>
+  <macro name="pages">
+    <text variable="page" prefix=", pp."/>
+  </macro>
+  <macro name="doi">
+    <text variable="DOI" prefix=" doi:"/>
+  </macro>
+  <citation>
+    <sort>
+      <key variable="author"/>
+      <key variable="issued"/>
+    </sort>
+    <layout suffix="." delimiter=" ">
+      <text macro="author"/>
+      <text macro="date"/>
+      <text macro="title"/>
+      <group delimiter=", ">
+        <text macro="journal-title"/>
+        <text macro="volume"/>
+        <text macro="pages"/>
+        <text macro="doi"/>
+      </group>
+    </layout>
+  </citation>
+</style>
